@@ -17,7 +17,7 @@ export default function SocialLinks() {
         </a>
         <span>/</span>
         <a
-          href="https://github.com/ThalidadosReis"
+          href="https://github.com/ThalitadosReis"
           target="_blank"
           rel="noopener noreferrer"
           className="hover-underline"
@@ -30,7 +30,7 @@ export default function SocialLinks() {
       {/* Small Screen: Show Icons */}
       <div className="flex lg:hidden gap-3">
         <a
-          href="https://www.linkedin.com/in/thalidadosreis/"
+          href="https://www.linkedin.com/in/thalitadosreis/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full bg-off-white"
@@ -39,7 +39,7 @@ export default function SocialLinks() {
           <FaLinkedin size={20} alt="LinkedIn icon" />
         </a>
         <a
-          href="https://github.com/ThalidadosReis"
+          href="https://github.com/ThalitadosReis"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full bg-off-white"
