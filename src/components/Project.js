@@ -11,19 +11,14 @@ export default function Project() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="uppercase text-[30px] lg:text-[45px] leading-[1] text-center lg:text-left lg:break-words lg:whitespace-pre-wrap">
-              What I've <span className="font-newyork">Built</span>
+              What I've {"\n"}
+              <span className="font-newyork">Built</span>
             </h1>
           </div>
           <ul className="flex-1 text-base text-justify">
             {projectsData.map((project, index) => (
               <li key={index}>
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  technologies={project.technologies}
-                  gitUrl={project.gitUrl}
-                  previewUrl={project.previewUrl}
-                />
+                <ProjectCard {...project} />
               </li>
             ))}
           </ul>
