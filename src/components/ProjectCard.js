@@ -10,6 +10,7 @@ export default function ProjectCard({
   return (
     <div className="mb-10">
       <div className="flex flex-col gap-3 leading-1">
+        {/* Title and Links */}
         <header className="flex justify-between items-center">
           <h1 className="uppercase text-[20px] lg:text-[35px] font-bold">
             {title}
@@ -37,6 +38,7 @@ export default function ProjectCard({
           </div>
         </header>
 
+        {/* Technologies */}
         <ul className="flex flex-wrap gap-2 text-xs font-semibold text-black/50">
           {technologies.map((tech, index) => (
             <li
@@ -49,6 +51,7 @@ export default function ProjectCard({
           ))}
         </ul>
 
+        {/* Description */}
         <p className="text-sm text-justify">{description}</p>
       </div>
     </div>
