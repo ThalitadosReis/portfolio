@@ -4,16 +4,26 @@ export default function ContactButton({
   icon,
   label,
   url,
+  onClick,
   bgColor,
   textColor,
   iconSize,
   ariaLabel,
+  className,
 }) {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else if (url) {
+      window.location.href = url; 
+    }
+  };
+
   return (
     <button
-      onClick={() => (window.location.href = url)}
-      className={`flex items-center gap-2 px-6 py-3 border-2 border-neutral-light rounded-full ${bgColor} ${textColor} hover-underline`}
-      aria-label={ariaLabel}
+      onClick={handleClick}
+      className={`flex items-center gap-2 px-6 py-2 border-2 border-neutral-light rounded-full ${bgColor} ${textColor} hover-underline ${className}`}
+      ariaLabel={ariaLabel}
     >
       {icon && React.cloneElement(icon, { size: iconSize })}
       {label}
