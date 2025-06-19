@@ -23,7 +23,7 @@ module.exports = {
         "off-white": "#fffffe",
       },
       backgroundImage: {
-        banner: "url('./assets/banner.jpg')",
+        banner: "url('./assets/images/banner.jpg')",
       },
     },
   },
