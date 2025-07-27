@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## 📸 [Live Preview](https://dosreis-portfolio.netlify.app/) 
 
-![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1753626421/default/Shots_So_Image_wvr7wf.png)
+![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1753628216/default/Dosreis_Portfolio_zcuf1p.png)
 
 ## ✨ Features
 
