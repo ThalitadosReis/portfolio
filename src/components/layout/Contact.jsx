@@ -37,8 +37,8 @@ export default function Contact() {
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between text-sm border-t border-black/10 pt-4">
-          <span>© 2024 Thalita dos Reis</span>
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm border-t border-black/10 pt-4 gap-4">
+          <span>© 2025 Thalita dos Reis</span>
           <SocialLinks />
         </div>
       </div>
