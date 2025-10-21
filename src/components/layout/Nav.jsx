@@ -1,5 +1,6 @@
 import { useState } from "react";
-import CV from "../../assets/cv.pdf";
+const CV = import.meta.env.VITE_CV;
+
 import SocialLinks from "../common/SocialLinks.jsx";
 
 export default function Nav() {

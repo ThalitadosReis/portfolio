@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# assets
-/src/assets/
+# Ignore the CV
+/public/assets/cv.pdf
+
