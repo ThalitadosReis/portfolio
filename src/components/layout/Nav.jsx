@@ -1,5 +1,5 @@
 import { useState } from "react";
-const CV = import.meta.env.VITE_CV;
+import CV from "../../assets/cv.pdf"
 
 import SocialLinks from "../common/SocialLinks.jsx";
 
