@@ -20,7 +20,7 @@ export default function Project() {
                 <ProjectCard {...project} />
               </li>
             ))}
-            <p className="text-center lg:text-left text-sm font-light">
+            <p className="text-sm font-light">
               More projects on GitHub
             </p>
           </ul>
