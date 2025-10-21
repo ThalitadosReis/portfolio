@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap');
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'New York';
+  src: url('./assets/fonts/NewYork.otf') format('opentype');
+}
+
+@theme {
+  --font-newyork: "New York", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-gray: #f6f5f4;
+  --color-neutral: #ecebea;
+  --color-offwhite: #fffffe;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
