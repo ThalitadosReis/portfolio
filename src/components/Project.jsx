@@ -15,7 +15,7 @@ export default function Project() {
               <Trans
                 i18nKey="projects.headline"
                 components={{
-                  1: <span className="block font-newyork" />,
+                  1: <span className="lg:block font-newyork" />,
                 }}
               />
             </h2>
