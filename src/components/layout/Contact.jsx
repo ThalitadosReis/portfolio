@@ -13,7 +13,7 @@ export default function Contact() {
       className="bg-gray rounded-t-[75px] md:rounded-t-[100px] lg:rounded-t-[200px] overflow-hidden"
     >
       <div className="container lg:max-w-6xl mx-auto pt-16 pb-8 text-center space-y-8">
-        <h2 className="uppercase font-medium text-4xl md:text-6xl lg:text-7xl leading-none whitespace-break-">
+        <h2 className="uppercase font-medium text-4xl md:text-6xl lg:text-7xl leading-none">
           <Trans
             i18nKey="contact.title"
             components={{
