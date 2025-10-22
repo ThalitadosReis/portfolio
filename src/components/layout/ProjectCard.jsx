@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 export default function ProjectCard({
-  title,
-  description,
   technologies,
   gitUrl,
   previewUrl,
+  index,
 }) {
+  const { t } = useTranslation();
   return (
     <section className="space-y-4">
       <header className="flex justify-between items-center mb-2">
-        <h2 className="text-2xl lg:text-3xl uppercase">{title}</h2>
+        <h2 className="text-2xl lg:text-3xl uppercase">{t(`projects.items.${index}.title`)}</h2>
 
         <nav className="flex items-center gap-2 text-sm">
           <a
@@ -16,7 +18,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
-            aria-label={`GitHub repository for ${title}`}
+            aria-label={`GitHub repository for ${t(`projects.items.${index}.title`)}`}
           >
             GitHub
           </a>
@@ -26,7 +28,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
-            aria-label={`Live preview of ${title}`}
+            aria-label={`Live preview of ${t(`projects.items.${index}.title`)}`}
           >
             Preview
           </a>
@@ -34,9 +36,9 @@ export default function ProjectCard({
       </header>
 
       <ul className="flex flex-wrap gap-2 text-xs font-light">
-        {technologies?.map((tech, index) => (
+        {technologies?.map((tech, techIndex) => (
           <li
-            key={index}
+            key={techIndex}
             className="px-3 py-1 bg-neutral rounded"
             aria-label={`Technology: ${tech}`}
           >
@@ -45,7 +47,7 @@ export default function ProjectCard({
         ))}
       </ul>
 
-      <p className="text-sm font-light text-justify indent-8">{description}</p>
+      <p className="text-sm font-light text-justify indent-8">{t(`projects.items.${index}.description`)}</p>
     </section>
   );
 }

@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 const image =
   "https://res.cloudinary.com/douen1dwv/image/upload/v1761042207/default/profile-picture-small_fpo5na.jpg";
 
 export default function Banner() {
+  const { t } = useTranslation();
   return (
     <section
       className="bg-gray rounded-b-[75px] md:rounded-b-[100px] lg:rounded-b-[200px] overflow-hidden"
@@ -9,17 +12,17 @@ export default function Banner() {
     >
       <div className="container lg:max-w-6xl mx-auto px-6 pb-24 space-y-8">
         <h1 className="text-5xl md:text-7xl lg:text-8xl  leading-none font-newyork">
-          Full-Stack Developer
+          {t('banner.title')}
         </h1>
 
         <p className="text-sm font-light">
-          I'm a Full-Stack Developer based in Zürich.
-          <br />I specialize in React and JavaScript.
+          {t('banner.description')}
+          <br />{t('banner.specialization')}
         </p>
 
         <img
           src={image}
-          alt="Profile"
+          alt={t('banner.profileAlt')}
           className="mx-auto h-[300px] lg:h-[450px] aspect-square object-cover grayscale"
         />
       </div>

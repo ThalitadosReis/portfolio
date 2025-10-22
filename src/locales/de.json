@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "email": "E-Mail",
+    "cv": "Lebenslauf"
+  },
+  "banner": {
+    "title": "Full-Stack Entwicklerin",
+    "description": "Ich bin eine Full-Stack Entwicklerin mit Sitz in Zürich.",
+    "specialization": "Ich bin spezialisiert auf React und JavaScript.",
+    "profileAlt": "Profil"
+  },
+  "about": {
+    "step": "01",
+    "title": "Über mich",
+    "headline": "Ich nutze meinen Hintergrund im <1>Gastgewerbe</1>, um <3>kundenorientierte</3> Lösungen zu entwickeln",
+    "paragraph1": "Hey! Ich bin Thalita, eine Full-Stack Entwicklerin in Zürich, die es liebt, Dinge zu bauen und herauszufinden, wie Sachen funktionieren. Wenn ich nicht am Programmieren bin, findest du mich wahrscheinlich beim Wandern an schönen Orten, beim Versuch, ein Gericht von meiner letzten Reise nachzukochen, oder beim Experimentieren in der Küche. Es gibt etwas Befriedigendes sowohl am Kochen als auch am Programmieren – diese Mischung aus dem Befolgen einer Struktur und dem Hinzufügen der eigenen Note.",
+    "paragraph2": "Ich habe jahrelang im Gastgewerbe gearbeitet, bevor ich in die Tech-Branche gewechselt bin, und ehrlich gesagt hat mich das so viel über das Lesen von Menschen, ruhig zu bleiben, wenn es chaotisch wird, und mit allen möglichen Persönlichkeiten zu arbeiten, gelehrt. Diese Fähigkeiten zeigen sich auf unerwartete Weise, zum Beispiel wenn ich an einem Projekt mitarbeite oder darüber nachdenke, wie jemand tatsächlich das nutzen wird, was ich baue.",
+    "paragraph3": "Im Moment konzentriere ich mich darauf, als Entwicklerin zu wachsen und Teams zu finden, in denen Menschen Wert auf Lernen und neue Dinge ausprobieren legen. Ich möchte an Projekten arbeiten, die wichtig sind, und mich weiter verbessern. Wenn das nach deiner Wellenlänge klingt, lass uns reden!"
+  },
+  "projects": {
+    "step": "02",
+    "title": "Projekte",
+    "headline": "Was ich <1>gebaut</1> habe",
+    "moreProjects": "Weitere Projekte auf GitHub",
+    "items": [
+      {
+        "title": "Physio+",
+        "description": "Physio+ ist eine moderne, responsive Website für eine Physiotherapiepraxis, die Patienten mit professionellen Pflegeleistungen verbindet. Sie verfügt über einen sauberen Hero-Bereich, interaktive Service-Karten, die verschiedene Behandlungen präsentieren, und eine integrierte Terminbuchung. Erstellt mit React und gestylt mit Tailwind CSS für optimale Zugänglichkeit und Benutzererfahrung auf allen Geräten. Die Website legt Wert auf Vertrauen und Professionalität durch intuitive Navigation und flüssige Animationen."
+      },
+      {
+        "title": "Brewtopia Café",
+        "description": "Brewtopia ist eine moderne, responsive Café-Website, die die handwerkliche Kaffeekultur präsentiert. Sie bietet ein elegantes Hero-Karussell, eine interaktive Menüanzeige, Kundenbewertungen und eine nahtlose Kontaktintegration. Erstellt mit React und gestylt mit Tailwind CSS für optimale Benutzererfahrung auf allen Geräten. Die Website betont visuelles Storytelling durch hochwertige Bilder und flüssige Animationen."
+      },
+      {
+        "title": "Moonlight",
+        "description": "Moonlight ist eine dynamische Plattform für Event-Enthusiasten. Entdecke Events mühelos mit standort- und datumsbasierten Suchen. Event-Organisatoren können ihre Veranstaltungen nahtlos bewerben. Erstelle ein personalisiertes Profil, um deine Favoriten zu verfolgen und mit anderen Teilnehmern zu interagieren. Tritt dem Live-Event-Chat für Echtzeit-Verbindungen bei."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Lass uns <1>vernetzen</1>",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "emailAria": "E-Mail senden",
+    "whatsappAria": "WhatsApp-Nachricht senden",
+    "copyright": "© 2025 Thalita dos Reis"
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}
