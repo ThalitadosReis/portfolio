@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thalitadosreis.ch/sitemap.xml
