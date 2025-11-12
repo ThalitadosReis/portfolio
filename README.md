@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## 📸 [Live Preview](https://thalitadosreis.ch/) 
 
-![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1753628216/default/Dosreis_Portfolio_zcuf1p.png)
+![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1762948448/default/Thalita_dos_Reis___Full-Stack_Developer_Portfolio_sws9bo.jpg)
 
 ## ✨ Features
 
