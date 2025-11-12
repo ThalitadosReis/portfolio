@@ -26,6 +26,10 @@
     "moreProjects": "More projects on GitHub",
     "items": [
       {
+        "title": "Brew Commerce",
+        "description": "Modern coffee storefront built with Next.js App Router, Clerk auth, and MongoDB. The app ships a polished marketing site, a customer shopping experience (including collection, product, checkout, and profile), and an admin console for managing orders, products, and analytics."
+      },
+      {
         "title": "Physio+",
         "description": "Physio+ is a modern, responsive physiotherapy practice website designed to connect patients with professional care services. Features a clean hero section, interactive service cards showcasing various treatments, and integrated appointment booking. Built with React and styled with Tailwind CSS for optimal accessibility and user experience across all devices. The site emphasizes trust and professionalism through intuitive navigation and smooth animations."
       },
