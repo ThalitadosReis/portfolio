@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This project showcases my skills, projects, and background as a front-end developer. It's designed to highlight my experience in modern web technologies and provide an interactive, visually appealing way for visitors to learn more about me and my work.
 
 
-## 📸 [Live Preview](https://dosreis-portfolio.netlify.app/) 
+## 📸 [Live Preview](https://thalitadosreis.ch/) 
 
 ![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1753628216/default/Dosreis_Portfolio_zcuf1p.png)
 
