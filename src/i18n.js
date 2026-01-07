@@ -20,9 +20,8 @@ i18n
     },
     fallbackLng: "en",
     detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
-      lookupLocalStorage: "i18nextLng",
+      order: ["navigator"],
+      caches: [],
     },
     interpolation: {
       escapeValue: false,

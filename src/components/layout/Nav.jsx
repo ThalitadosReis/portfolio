@@ -72,17 +72,15 @@ export default function Nav() {
           </a>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-stretch justify-center self-stretch">
           <button
             onClick={toggleLanguage}
             aria-label="Toggle language"
-            className="relative px-2 py-2 w-24 h-[36px] rounded-full border-2 border-neutral bg-offwhite transition-colors duration-300 flex items-center"
+            className="relative px-6 py-2 w-24 rounded-full border-2 border-neutral bg-offwhite transition-colors duration-300 flex items-center text-xs"
           >
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-medium">
-              EN
-            </span>
-            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-medium">
-              DE
+            <span className="absolute inset-0 flex items-center">
+              <span className="w-1/2 text-center">EN</span>
+              <span className="w-1/2 text-center">DE</span>
             </span>
 
             <span
