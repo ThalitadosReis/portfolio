@@ -35,3 +35,10 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
    ```bash
    npm run dev
    ```
+
+## CV Download Configuration
+
+The CV button uses language-specific static files from `public/`:
+
+- `/cv_en.pdf`
+- `/cv_de.pdf`
