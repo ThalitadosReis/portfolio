@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import CV_EN from "../../assets/cv_en.pdf";
-import CV_DE from "../../assets/cv_de.pdf";
-
 const email = "dosreistha@gmail.com";
 
 export default function Nav() {
@@ -62,7 +59,7 @@ export default function Nav() {
           </div>
 
           <a
-            href={i18n.language === "de" ? CV_DE : CV_EN}
+            href={i18n.language === "de" ? "/cv_de.pdf" : "/cv_en.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View CV"

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 const image =
-  "https://res.cloudinary.com/douen1dwv/image/upload/f_auto,q_auto/v1761042207/default/profile-picture-small_fpo5na.jpg";
+  "https://res.cloudinary.com/douen1dwv/image/upload/v1771245425/default/profile-picture.jpg";
 
 export default function Banner() {
   const { t } = useTranslation();
@@ -11,7 +11,7 @@ export default function Banner() {
       id="home"
     >
       <div className="container lg:max-w-6xl mx-auto px-6 pb-24 space-y-8">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl  leading-none font-newyork">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl leading-none font-newyork">
           {t("banner.title")}
         </h1>
 
@@ -24,6 +24,9 @@ export default function Banner() {
         <img
           src={image}
           alt={t("banner.profileAlt")}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="mx-auto h-[300px] lg:h-[450px] aspect-square object-cover grayscale"
         />
       </div>

@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+public/cv_en.pdf
+public/cv_de.pdf
 
 # Editor directories and files
 .vscode/*
