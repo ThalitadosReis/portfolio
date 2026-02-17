@@ -94,7 +94,7 @@ export default function Project() {
                         <img
                           src={project.image}
                           alt={`${t(`projects.items.${index}.title`)} preview`}
-                          className="w-full h-64 md:h-96 object-cover object-[25%_5%] grayscale-45 scale-110"
+                          className="w-full h-64 md:h-96 object-cover object-[25%_5%] grayscale-35 scale-110"
                           loading="lazy"
                         />
                       </div>
