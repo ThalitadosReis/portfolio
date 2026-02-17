@@ -27,7 +27,7 @@ export default function Banner() {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="mx-auto h-[300px] lg:h-[450px] aspect-square object-cover grayscale"
+          className="mx-auto h-[300px] lg:h-[450px] aspect-square object-cover grayscale-45"
         />
       </div>
     </section>
