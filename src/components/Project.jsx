@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import projectsData from "../data/projectsData.js";
 import SectionHeader from "./common/SectionHeader.jsx";
@@ -8,6 +8,8 @@ export default function Project() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const totalProjects = projectsData.length;
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
 
   const goToPrevious = () => {
     setActiveIndex((current) =>
@@ -31,6 +33,32 @@ export default function Project() {
     return () => clearInterval(intervalId);
   }, [totalProjects]);
 
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+    touchStartY.current = event.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+
+    const endX = event.changedTouches[0].clientX;
+    const endY = event.changedTouches[0].clientY;
+    const deltaX = touchStartX.current - endX;
+    const deltaY = touchStartY.current - endY;
+    const swipeThreshold = 40;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
+      if (deltaX > 0) {
+        goToNext();
+      } else {
+        goToPrevious();
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   return (
     <section id="project" className="py-12 px-6">
       <div className="container lg:max-w-6xl mx-auto space-y-12">
@@ -49,13 +77,18 @@ export default function Project() {
           </div>
 
           <div className="space-y-4">
-            <div className="overflow-hidden">
+            <div
+              className="overflow-hidden"
+              style={{ touchAction: "pan-y" }}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               <ul
-                className="flex transition-transform duration-1000 ease-in-out"
+                className="flex -mx-3 transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
               >
                 {projectsData.map((project, index) => (
-                  <li key={project.id} className="w-full shrink-0">
+                  <li key={project.id} className="w-full shrink-0 px-3">
                     <article className="space-y-4">
                       <div className="overflow-hidden">
                         <img
