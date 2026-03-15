@@ -1,10 +1,11 @@
-const baseProjects = [
+const projects = [
   {
     title: "Brew Commerce",
-    image:
-      "https://res.cloudinary.com/douen1dwv/image/upload/v1767795335/default/Brew_Commerce_3.15pm_01-07_xhvnpu.jpg",
-    description:
-      "Modern coffee storefront built with Next.js App Router, Clerk auth, and MongoDB. The app ships a polished marketing site, a customer shopping experience (including collection, product, checkout, and profile), and an admin console for managing orders, products, and analytics.",
+    highlight: true,
+    description: {
+      en: "E-commerce platform for a modern coffee brand built with Next.js, Clerk, and MongoDB. It includes a storefront, checkout flow, customer accounts, and an admin area for products and orders.",
+      de: "E-Commerce-Plattform fuer eine moderne Kaffeemarke, entwickelt mit Next.js, Clerk und MongoDB. Sie umfasst eine Storefront, einen Checkout-Prozess, Kundenkonten und einen Admin-Bereich fuer Produkte und Bestellungen.",
+    },
     technologies: [
       "Next.js 15",
       "React",
@@ -21,10 +22,10 @@ const baseProjects = [
   },
   {
     title: "Physio+",
-    image:
-      "https://res.cloudinary.com/douen1dwv/image/upload/v1762962848/default/Physio__4.52pm_11-12_1_e324n0.jpg",
-    description:
-      "Physio+ is a modern, responsive physiotherapy practice website designed to connect patients with professional care services. Features a clean hero section, interactive service cards showcasing various treatments, and integrated appointment booking. Built with React and styled with Tailwind CSS for optimal accessibility and user experience across all devices. The site emphasizes trust and professionalism through intuitive navigation and smooth animations.",
+    description: {
+      en: "Responsive website for a physiotherapy practice focused on clarity and trust. It highlights services, supports appointment requests, and guides visitors through a clean, accessible interface.",
+      de: "Responsive Website fuer eine Physiotherapiepraxis mit Fokus auf Klarheit und Vertrauen. Sie praesentiert Leistungen, unterstuetzt Terminanfragen und fuehrt Besucher durch eine klare, barrierearme Oberflaeche.",
+    },
     technologies: [
       "React.js",
       "Tailwind CSS",
@@ -37,19 +38,31 @@ const baseProjects = [
   },
   {
     title: "Brewtopia Café",
-    image:
-      "https://res.cloudinary.com/douen1dwv/image/upload/v1762963164/default/Brewtopia_Caf__knomq6.jpg",
-    description:
-      "Brewtopia is a modern, responsive café website designed to showcase artisanal coffee culture. Features an elegant hero carousel, interactive menu display, customer testimonials, and seamless contact integration. Built with React and styled with Tailwind CSS for optimal user experience across all devices. The site emphasizes visual storytelling through high-quality imagery and smooth animations.",
+    description: {
+      en: "Marketing website for a cafe brand with a warm, editorial feel. It showcases the menu, brand story, and contact details in a responsive React interface.",
+      de: "Marketing-Website fuer eine Cafemarke mit warmer, editorialer Anmutung. Sie zeigt Speisekarte, Markengeschichte und Kontaktdaten in einer responsiven React-Oberflaeche.",
+    },
     technologies: ["React.js", "Tailwind CSS", "JavaScript"],
     gitUrl: "https://github.com/ThalitadosReis/cafe-website",
     previewUrl: "https://brewtopiacafe.netlify.app/",
   },
+  {
+    title: "Moonlight",
+    description: {
+      en: "Event discovery platform built with the MERN stack for browsing, promoting, and attending concerts, festivals, workshops, and more. It was created as the final project for Ironhack's Web Development Bootcamp.",
+      de: "Event-Plattform auf Basis des MERN-Stacks zum Entdecken, Bewerben und Besuchen von Konzerten, Festivals, Workshops und mehr. Sie entstand als Abschlussprojekt des Web Development Bootcamps von Ironhack.",
+    },
+    technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Socket.io"],
+    gitUrl:
+      "https://github.com/JoTa-Events/moonlight-client?tab=readme-ov-file",
+  },
 ];
 
-const projectsData = baseProjects.map((project, index) => ({
-  id: index + 1,
-  ...project,
-}));
+export function getLocalizedProjects(language = "en") {
+  const locale = language?.startsWith("de") ? "de" : "en";
 
-export default projectsData;
+  return projects.map((project) => ({
+    ...project,
+    description: project.description[locale],
+  }));
+}
