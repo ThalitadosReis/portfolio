@@ -11,10 +11,10 @@ export default function Projects() {
   const projects = getLocalizedProjects(lang);
 
   return (
-    <main className="pt-14 min-h-screen">
+    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col bg-neutral-50 pt-14">
       <PageIntro label={t.projects.title} title={t.projects.title} />
 
-      <section className="py-16 bg-neutral-50">
+      <section className="py-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-col gap-px overflow-hidden rounded-sm border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.06)]">
             {projects.map((project, index) => (

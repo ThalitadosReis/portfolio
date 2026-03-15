@@ -48,7 +48,7 @@ export const de = {
     cardDescription:
       "Verfügbar für Junior Full-Stack-Rollen, Projektarbeit und Produkt-Kollaborationen mit Teams, die durchdachte und nutzerorientierte Erlebnisse bauen.",
     stackTitle: "Mein Stack",
-    socialTitle: "Weitere Profile",
+    socialTitle: "Oder erreiche mich auf",
     email: "E-Mail senden",
     whatsapp: "WhatsApp",
     emailAria: "E-Mail senden",

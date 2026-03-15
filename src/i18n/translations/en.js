@@ -47,7 +47,7 @@ export const en = {
     cardDescription:
       "Available for junior full-stack roles, contract work, and product collaborations with teams building polished, user-focused experiences.",
     stackTitle: "My stack",
-    socialTitle: "Elsewhere",
+    socialTitle: "Or reach me on",
     email: "Send an email",
     whatsapp: "WhatsApp",
     emailAria: "Send email",
