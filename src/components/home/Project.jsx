@@ -19,7 +19,7 @@ export default function Project() {
   return (
     <section
       id="project"
-      className="border-y border-neutral-200 bg-white py-20"
+      className="bg-neutral-100 py-20"
     >
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-10">

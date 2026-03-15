@@ -31,7 +31,7 @@ export const de = {
     allTech: "Alle Technologien",
   },
   projects: {
-    step: "03",
+    step: "02",
     title: "Projekte",
     viewAll: "Alle Projekte",
     featured: "Highlight",
@@ -39,7 +39,7 @@ export const de = {
     livePreview: "Live Demo",
   },
   contact: {
-    step: "04",
+    step: "03",
     title: "Kontakt aufnehmen",
     pageLabel: "Kontakt",
     pageDescription:

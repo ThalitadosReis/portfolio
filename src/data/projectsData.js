@@ -1,5 +1,39 @@
 const projects = [
   {
+    title: "Cafe Template",
+    description: {
+      en: "Modern cafe website template with menu management, email flows, and production-ready API handling using Netlify Functions, plus an Express backend for local development.",
+      de: "Modernes Cafe-Website-Template mit Menueverwaltung, E-Mail-Flows und produktionsreifer API-Anbindung ueber Netlify Functions sowie einem Express-Backend fuer die lokale Entwicklung.",
+    },
+    technologies: [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "DnD Kit",
+      "Nodemailer",
+      "Express",
+      "MongoDB",
+    ],
+    gitUrl: "https://github.com/ThalitadosReis/cafe-template",
+    previewUrl: "https://template-cafe.netlify.app/",
+  },
+  {
+    title: "Salon Template",
+    description: {
+      en: "Modern salon website template built for bookings and service presentation, with a React frontend and a small Express plus Nodemailer backend for reservation emails.",
+      de: "Modernes Salon-Website-Template fuer Buchungen und Leistungsdarstellung, mit React-Frontend und einem kleinen Express- plus Nodemailer-Backend fuer Reservierungs-E-Mails.",
+    },
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Express",
+      "Nodemailer",
+    ],
+    gitUrl: "https://github.com/ThalitadosReis/salon-template",
+    previewUrl: "https://template-salon.netlify.app/",
+  },
+
+  {
     title: "Brew Commerce",
     highlight: true,
     description: {
@@ -20,6 +54,7 @@ const projects = [
     gitUrl: "https://github.com/ThalitadosReis/brew-commerce",
     previewUrl: "https://brew-commerce.vercel.app/",
   },
+
   {
     title: "Physio+",
     description: {

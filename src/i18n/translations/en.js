@@ -30,7 +30,7 @@ export const en = {
     allTech: "All tech",
   },
   projects: {
-    step: "03",
+    step: "02",
     title: "Projects",
     viewAll: "All projects",
     featured: "Highlight",
@@ -38,7 +38,7 @@ export const en = {
     livePreview: "Live Demo",
   },
   contact: {
-    step: "04",
+    step: "03",
     title: "Get in touch",
     pageLabel: "Contact",
     pageDescription:

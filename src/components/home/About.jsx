@@ -26,7 +26,7 @@ export default function About() {
   const paragraphs = [t.about.paragraph1, t.about.paragraph2].filter(Boolean);
 
   return (
-    <section id="about" className="border-y border-neutral-200 bg-white py-20">
+    <section id="about" className="bg-white py-20">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-10">
           <Reveal>

@@ -8,7 +8,7 @@ export default function Contact() {
   const { t } = useLang();
 
   return (
-    <section id="contact" className="bg-neutral-50 py-24">
+    <section id="contact" className="bg-white py-24">
       <Reveal className="max-w-5xl mx-auto px-6 text-center">
         <p className="mb-2 text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-400">
           {t.contact.step}
