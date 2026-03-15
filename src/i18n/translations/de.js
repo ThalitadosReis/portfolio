@@ -25,11 +25,6 @@ export const de = {
     paragraph2:
       "Vor meinem Wechsel in die Tech-Welt habe ich im Gastgewerbe gearbeitet. Diese Erfahrung prägt bis heute, wie ich kommuniziere, im Team arbeite und über die Menschen nachdenke, die meine Produkte nutzen. Ich suche Projekte und Teams, in denen ich weiter lernen, sorgfältig beitragen und als Entwicklerin wachsen kann.",
   },
-  skills: {
-    step: "02",
-    title: "Skills",
-    allTech: "Alle Technologien",
-  },
   projects: {
     step: "02",
     title: "Projekte",

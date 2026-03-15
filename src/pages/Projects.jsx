@@ -25,7 +25,7 @@ export default function Projects() {
               >
                 <article className="p-7 lg:p-8">
                   <div className="flex items-start justify-between gap-6 mb-4">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-start gap-3">
                       <span className="text-[0.7rem] font-mono text-accent leading-4 tracking-[0.1em] uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -33,13 +33,13 @@ export default function Projects() {
                         {project.title}
                       </h2>
                       {project.highlight && (
-                        <span className="inline-flex items-center rounded-sm border border-neutral-600/25 bg-neutral-600/10 px-2.5 py-0.5 text-[0.65rem] font-medium leading-4 tracking-[0.1em] uppercase text-neutral-600">
+                        <span className="inline-flex shrink-0 items-center rounded-sm border border-accent/45 bg-accent/10 px-2.5 py-0.5 text-[0.65rem] font-medium leading-4 tracking-[0.1em] uppercase text-accent">
                           {t.projects.featured}
                         </span>
                       )}
                     </div>
 
-                    <div className="flex items-center gap-2 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="hidden shrink-0 items-center gap-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 md:flex">
                       <CtaLink
                         href={project.gitUrl}
                         target="_blank"

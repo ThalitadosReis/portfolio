@@ -24,11 +24,6 @@ export const en = {
     paragraph2:
       "Before tech, I worked in hospitality, which shaped how I collaborate, communicate, and think about people using what I build. I'm looking for projects and teams where I can keep learning, contribute with care, and grow as a developer.",
   },
-  skills: {
-    step: "02",
-    title: "Skills",
-    allTech: "All tech",
-  },
   projects: {
     step: "02",
     title: "Projects",

@@ -30,7 +30,7 @@ export default function Banner() {
                 <span className="block text-neutral-800">
                   {t.banner.firstName}
                 </span>
-                <span className="block text-neutral-600 italic">
+                <span className="block text-accent/65 italic">
                   {t.banner.lastName}
                 </span>
               </h1>
@@ -43,7 +43,7 @@ export default function Banner() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <div className="w-12 h-px bg-neutral-600 mb-6 origin-left" />
+              <div className="w-12 h-px bg-accent mb-6 origin-left" />
             </Reveal>
 
             <Reveal delay={0.2}>
