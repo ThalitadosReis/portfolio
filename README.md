@@ -1,44 +1,50 @@
 # Portfolio
 
-Welcome to my personal portfolio website! This project showcases my skills, projects, and background as a front-end developer. It's designed to highlight my experience in modern web technologies and provide an interactive, visually appealing way for visitors to learn more about me and my work.
+Personal portfolio website built with React, Vite, Tailwind CSS, and React Router.
 
+Live site: [thalitadosreis.ch](https://thalitadosreis.ch/)
 
-## 📸 [Live Preview](https://thalitadosreis.ch/) 
+## Stack
 
-![Screenshot of portfolio](https://res.cloudinary.com/douen1dwv/image/upload/v1762948448/default/Thalita_dos_Reis___Full-Stack_Developer_Portfolio_sws9bo.jpg)
+- React
+- Vite
+- Tailwind CSS
+- React Router
 
-## ✨ Features
+## Features
 
-- Fully responsive layout for all screen sizes
-- Clean and modern design
-- Smooth scroll and section transitions
-- Projects showcase with GitHub and live preview links
-- Contact section with integrated email and WhatsApp options
-- Built with React and styled using Tailwind CSS
+- Responsive homepage with editorial layout and reveal animations
+- Projects page with highlighted work, source code links, and live demos
+- Contact page with email, WhatsApp, and social links
+- English and German language toggle
+- Netlify SPA routing via `public/_redirects`
 
-## 🚀 Getting Started
+## Development
 
-### Installation
+Install dependencies:
 
-**Clone the repository:**
-   ```bash
-   git clone https://github.com/ThalitadosReis/portfolio.git
-   cd portfolio
-   ```
+```bash
+npm install
+```
 
-**Install the dependencies:**
-   ```bash
-   npm install
-   ```
+Start the dev server:
 
-**Start the development server:**
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-## CV Download Configuration
+Create a production build:
 
-The CV button uses language-specific static files from `public/`:
+```bash
+npm run build
+```
 
-- `/cv_en.pdf`
-- `/cv_de.pdf`
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Deployment
+
+This project is configured for Netlify.

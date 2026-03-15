@@ -1,4 +1,5 @@
 import Reveal from "../Reveal.jsx";
+import HeroImage from "./HeroImage.jsx";
 import Tag from "../ui/Tag.jsx";
 import { useLang } from "../../i18n/LangContext.jsx";
 
@@ -38,6 +39,7 @@ export default function About() {
           </Reveal>
 
           <div className="lg:col-start-2 font-light space-y-4">
+            <HeroImage className="lg:hidden pb-4" delay={0.04} />
             {paragraphs.map((paragraph, index) => (
               <Reveal key={index} delay={0.08 + index * 0.08}>
                 <p className="text-sm text-neutral-600 leading-relaxed">
