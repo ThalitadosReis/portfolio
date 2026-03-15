@@ -18,8 +18,8 @@ export default function Banner() {
       <div className="max-w-5xl mx-auto px-6 w-full py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 items-center">
           <div>
-            <Reveal className="inline-flex items-center gap-2 mb-10">
-              <span className="w-1.5 h-1.5 rounded-full bg-neutral-600 animate-pulse" />
+            <Reveal className="inline-flex items-center gap-2 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500">
                 {t.banner.available}
               </span>

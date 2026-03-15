@@ -11,7 +11,7 @@ export default function Projects() {
   const projects = getLocalizedProjects(lang);
 
   return (
-    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col bg-neutral-50 pt-14">
+    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col bg-white pt-14">
       <PageIntro label={t.projects.title} title={t.projects.title} />
 
       <section className="py-16">
@@ -26,7 +26,7 @@ export default function Projects() {
                 <article className="p-7 lg:p-8">
                   <div className="flex items-start justify-between gap-6 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-5 shrink-0 text-[0.65rem] leading-4 tracking-[0.1em] text-neutral-300">
+                      <span className="text-[0.7rem] font-mono text-accent leading-4 tracking-[0.1em] uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <h2 className="font-display text-2xl leading-none tracking-tight text-neutral-800 transition-colors duration-200 group-hover:text-neutral-600 lg:text-3xl">

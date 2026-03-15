@@ -5,7 +5,7 @@ export default function PageIntro({ label, title }) {
     <section className="bg-neutral-100 py-16">
       <div className="max-w-5xl mx-auto px-6">
         <Reveal>
-          <p className="mb-3 text-[0.7rem] leading-4 tracking-[0.15em] uppercase text-accent/75">
+          <p className="mb-3 text-[0.7rem] leading-4 tracking-[0.15em] uppercase text-accent">
             {label}
           </p>
         </Reveal>
