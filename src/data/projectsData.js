@@ -7,7 +7,7 @@ const projects = [
       de: "E-Commerce-Plattform fuer eine moderne Kaffeemarke, entwickelt mit Next.js, Clerk und MongoDB. Sie umfasst eine Storefront, einen Checkout-Prozess, Kundenkonten und einen Admin-Bereich fuer Produkte und Bestellungen.",
     },
     technologies: [
-      "Next.js 15",
+      "Next.js",
       "React",
       "TypeScript",
       "Clerk",
