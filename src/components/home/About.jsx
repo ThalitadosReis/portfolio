@@ -1,6 +1,7 @@
-import Reveal from "../Reveal.jsx";
 import HeroImage from "./HeroImage.jsx";
 import Tag from "../ui/Tag.jsx";
+import SectionHeading from "../ui/SectionHeading.jsx";
+import Reveal from "../Reveal.jsx";
 import { useLang } from "../../i18n/LangContext.jsx";
 
 const aboutTags = {
@@ -29,14 +30,7 @@ export default function About() {
     <section id="about" className="bg-white py-20">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-10">
-          <Reveal>
-            <p className="mb-2 text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-400">
-              {t.about.step}
-            </p>
-            <h2 className="font-display text-2xl leading-none tracking-tight text-neutral-800">
-              {t.about.title}
-            </h2>
-          </Reveal>
+          <SectionHeading label={t.about.step} title={t.about.title} />
 
           <div className="lg:col-start-2 font-light space-y-4">
             <HeroImage className="lg:hidden pb-4" delay={0.04} />

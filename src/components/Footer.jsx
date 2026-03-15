@@ -13,38 +13,35 @@ export default function Footer() {
   const { t } = useLang();
   const year = new Date().getFullYear();
 
+  const navItems = [
+    { to: "/", label: t.nav.home },
+    { to: "/projects", label: t.nav.projects },
+    { to: "/contact", label: t.nav.contact },
+  ];
+
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-50">
+    <footer className="border-t border-neutral-100 bg-white">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-6">
           <span className="font-display text-xl leading-none text-neutral-700">
-            Thalita<span className="text-neutral-600">.</span>
+            Thalita<span className="text-accent">.</span>
           </span>
           <span className="text-neutral-400 hidden sm:block">·</span>
-          <span className="hidden text-[0.65rem] leading-4 tracking-[0.1em] text-neutral-400 sm:block">
+          <span className="hidden text-[0.75rem] font-mono leading-4 tracking-[0.1em] text-accent/75 sm:block">
             © {year}
           </span>
         </div>
 
         <nav className="flex items-center gap-5">
-          <Link
-            to="/"
-            className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500 transition-colors duration-200 hover:text-neutral-800"
-          >
-            {t.nav.home}
-          </Link>
-          <Link
-            to="/projects"
-            className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500 transition-colors duration-200 hover:text-neutral-800"
-          >
-            {t.nav.projects}
-          </Link>
-          <Link
-            to="/contact"
-            className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500 transition-colors duration-200 hover:text-neutral-800"
-          >
-            {t.nav.contact}
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500 transition-colors duration-200 hover:text-accent"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="flex items-center gap-3">

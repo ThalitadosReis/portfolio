@@ -10,6 +10,10 @@
   font-display: swap;
 }
 
+@theme inline {
+  --color-accent: #d07e42;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }

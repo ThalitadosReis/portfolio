@@ -1,6 +1,7 @@
 import { EnvelopeIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import Reveal from "../Reveal.jsx";
 import CtaLink from "../ui/CtaLink.jsx";
+import SectionHeading from "../ui/SectionHeading.jsx";
 import { siteData } from "../../data/siteData.js";
 import { useLang } from "../../i18n/LangContext.jsx";
 
@@ -10,17 +11,14 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-white py-24">
       <Reveal className="max-w-5xl mx-auto px-6 text-center">
-        <p className="mb-2 text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-400">
-          {t.contact.step}
-        </p>
-        <Reveal>
-          <h2 className="font-display mb-5 text-5xl leading-none tracking-tight text-neutral-800 lg:text-6xl">
-            {t.contact.title}
-          </h2>
-        </Reveal>
+        <SectionHeading
+          label={t.contact.step}
+          title={t.contact.title}
+          titleClassName="mb-5 text-5xl lg:text-6xl"
+        />
 
         <Reveal delay={0.08}>
-          <div className="w-8 h-px bg-neutral-900 mx-auto mb-6" />
+          <div className="mx-auto mb-6 h-px w-8 bg-accent" />
           <p className="max-w-md mx-auto text-sm font-light leading-7 text-neutral-500">
             {t.contact.pageDescription}
           </p>

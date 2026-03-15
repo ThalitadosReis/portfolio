@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const variants = {
-  default: "bg-neutral-800 text-neutral-100 hover:bg-neutral-600",
+  default: "bg-neutral-800 text-neutral-100 hover:bg-accent",
   outline:
-    "border border-neutral-300 text-neutral-700 hover:border-neutral-600 hover:bg-neutral-600/5 hover:text-neutral-600",
-  inline: "px-0 py-0 text-neutral-600 hover:text-neutral-800",
+    "border border-neutral-300 text-neutral-500 hover:border-accent hover:bg-accent/8 hover:text-accent",
+  inline: "px-0 py-0 text-neutral-500 hover:text-accent",
   square:
-    "border border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-neutral-800",
+    "border border-neutral-200 text-neutral-500 hover:border-accent/45 hover:bg-accent/8 hover:text-accent",
 };
 
 const sizes = {
