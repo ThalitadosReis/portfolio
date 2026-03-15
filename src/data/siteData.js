@@ -1,10 +1,11 @@
-const whatsappPhone = import.meta.env.VITE_WHATSAPP_PHONE ?? "";
+const whatsappPhone = "+41 76 566 49 21";
 const email = "dosreistha@gmail.com";
+const whatsappHref = whatsappPhone.replace(/\D/g, "");
 
 export const siteData = {
   email,
   whatsappPhone,
-  whatsappUrl: whatsappPhone ? `https://wa.me/${whatsappPhone}` : null,
+  whatsappUrl: whatsappHref ? `https://wa.me/${whatsappHref}` : null,
   location: "Lenzburg, Switzerland",
   github: "https://github.com/ThalitadosReis",
   linkedin: "https://www.linkedin.com/in/thalitadosreis/",

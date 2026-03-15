@@ -10,10 +10,7 @@ export default function PageIntro({ label, title }) {
           </p>
         </Reveal>
         <Reveal delay={0.05}>
-          <h1
-            className="font-display leading-none tracking-tight"
-            style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
-          >
+          <h1 className="font-display text-[clamp(2.8rem,6vw,5rem)] leading-none tracking-tight">
             {title}
           </h1>
         </Reveal>

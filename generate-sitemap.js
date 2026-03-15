@@ -1,17 +1,24 @@
+import { writeFile } from "node:fs/promises";
 import { SitemapStream, streamToPromise } from "sitemap";
-import { createWriteStream } from "fs";
 
-const domain = "https://thalitadosreis.ch";
-const pages = ["/"];
+const DOMAIN = "https://thalitadosreis.ch";
+const PAGES = ["/", "/projects", "/contact"];
 
-const sitemap = new SitemapStream({ hostname: domain });
-pages.forEach((url) =>
-  sitemap.write({ url, changefreq: "monthly", priority: 1.0 })
-);
-sitemap.end();
+async function generateSitemap() {
+  const sitemap = new SitemapStream({ hostname: DOMAIN });
 
-const out = createWriteStream("./public/sitemap.xml");
-streamToPromise(sitemap).then((data) => {
-  out.write(data.toString());
+  PAGES.forEach((url) => {
+    sitemap.write({ url, changefreq: "monthly", priority: 1.0 });
+  });
+
+  sitemap.end();
+
+  const data = await streamToPromise(sitemap);
+  await writeFile("./public/sitemap.xml", data.toString());
   console.log("sitemap.xml generated");
+}
+
+generateSitemap().catch((error) => {
+  console.error("Failed to generate sitemap", error);
+  process.exitCode = 1;
 });

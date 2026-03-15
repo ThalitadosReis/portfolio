@@ -27,7 +27,7 @@ export default function Project() {
             <p className="mb-2 text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-400">
               {t.projects.step}
             </p>
-            <h2 className="font-display text-2xl leading-none tracking-tight text-neutral-700">
+            <h2 className="font-display text-2xl leading-none tracking-tight text-neutral-800">
               {t.projects.title}
             </h2>
           </Reveal>
