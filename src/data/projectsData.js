@@ -69,7 +69,7 @@ const projects = [
       "Nodemailer",
     ],
     gitUrl: "https://github.com/ThalitadosReis/physio-website",
-    previewUrl: "https://physioplus-website.vercel.app/",
+    previewUrl: "https://physioplus-web.netlify.app/",
   },
   {
     title: "Brewtopia Café",
