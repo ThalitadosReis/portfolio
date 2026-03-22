@@ -37,14 +37,14 @@ const projects = [
     title: "Brew Commerce",
     highlight: true,
     description: {
-      en: "E-commerce platform for a modern coffee brand built with Next.js, Clerk, and MongoDB. It includes a storefront, checkout flow, customer accounts, and an admin area for products and orders.",
-      de: "E-Commerce-Plattform fuer eine moderne Kaffeemarke, entwickelt mit Next.js, Clerk und MongoDB. Sie umfasst eine Storefront, einen Checkout-Prozess, Kundenkonten und einen Admin-Bereich fuer Produkte und Bestellungen.",
+      en: "E-commerce platform built with Next.js, custom JWT authentication, and MongoDB. It includes a storefront, product discovery flow, Stripe checkout, and a protected admin area for products and orders.",
+      de: "E-Commerce-Plattform, entwickelt mit Next.js, eigener JWT-Authentifizierung und MongoDB. Sie umfasst eine Storefront, eine Produktsuche, Stripe-Checkout und einen geschuetzten Admin-Bereich fuer Produkte und Bestellungen.",
     },
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
-      "Clerk",
+      "JWT Auth",
       "MongoDB",
       "Mongoose",
       "Tailwind CSS",
