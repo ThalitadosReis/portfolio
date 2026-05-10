@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "Cafe Template",
+    title: "BoldBrew Café",
     description: {
       en: "Reusable cafe website template with a drag-and-drop admin panel for managing and persisting menu items via MongoDB. Contact emails are handled by Netlify Functions in production and an Express server locally, making it easy to clone and deploy.",
       de: "Wiederverwendbares Cafe-Website-Template mit einem Drag-and-Drop-Adminbereich zum Verwalten und Speichern von Menueintraegen ueber MongoDB. Kontakt-E-Mails werden in der Produktion ueber Netlify Functions und lokal ueber einen Express-Server verarbeitet.",
@@ -17,7 +17,7 @@ const projects = [
     previewUrl: "https://boldbrew-cafe.netlify.app/",
   },
   {
-    title: "Salon Template",
+    title: "Maison Salon",
     description: {
       en: "Salon website template with a service overview, booking request form, and email delivery via Express and Nodemailer. Includes legal pages for compliance-ready deployments and a clean multi-page React structure ready to customize and ship.",
       de: "Salon-Website-Template mit Leistungsuebersicht, Buchungsanfrageformular und E-Mail-Versand ueber Express und Nodemailer. Enthaelt rechtskonforme Seiten wie Impressum und Datenschutz sowie eine klare mehrseitige React-Struktur.",
@@ -26,7 +26,6 @@ const projects = [
     gitUrl: "https://github.com/ThalitadosReis/salon-template",
     previewUrl: "https://maison-salon.netlify.app/",
   },
-
   {
     title: "Brew Commerce",
     highlight: true,
@@ -48,7 +47,6 @@ const projects = [
     gitUrl: "https://github.com/ThalitadosReis/brew-commerce",
     previewUrl: "https://brew-commerce.vercel.app/",
   },
-
   {
     title: "Physio+",
     description: {
@@ -82,9 +80,8 @@ const projects = [
       en: "Full-stack event discovery platform built with the MERN stack for browsing, promoting, and attending concerts, festivals, and workshops. Features real-time interactions via Socket.io, developed as the capstone project for Ironhack's Web Development Bootcamp.",
       de: "Full-Stack-Event-Plattform auf Basis des MERN-Stacks zum Entdecken, Bewerben und Besuchen von Konzerten, Festivals und Workshops. Mit Echtzeit-Interaktionen ueber Socket.io, entwickelt als Abschlussprojekt des Ironhack Web Development Bootcamps.",
     },
-    technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Socket.io"],
-    gitUrl:
-      "https://github.com/JoTa-Events/moonlight-client?tab=readme-ov-file",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
+    gitUrl: "https://github.com/JoTa-Events/moonlight-client?tab=readme-ov-file",
   },
 ];
 
