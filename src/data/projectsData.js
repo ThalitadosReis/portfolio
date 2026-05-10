@@ -2,12 +2,11 @@ const projects = [
   {
     title: "Cafe Template",
     description: {
-      en: "Modern cafe website template with menu management, email flows, and production-ready API handling using Netlify Functions, plus an Express backend for local development.",
-      de: "Modernes Cafe-Website-Template mit Menueverwaltung, E-Mail-Flows und produktionsreifer API-Anbindung ueber Netlify Functions sowie einem Express-Backend fuer die lokale Entwicklung.",
+      en: "Reusable cafe website template with a drag-and-drop admin panel for managing and persisting menu items via MongoDB. Contact emails are handled by Netlify Functions in production and an Express server locally, making it easy to clone and deploy.",
+      de: "Wiederverwendbares Cafe-Website-Template mit einem Drag-and-Drop-Adminbereich zum Verwalten und Speichern von Menueintraegen ueber MongoDB. Kontakt-E-Mails werden in der Produktion ueber Netlify Functions und lokal ueber einen Express-Server verarbeitet.",
     },
     technologies: [
       "React",
-      "React Router",
       "Tailwind CSS",
       "DnD Kit",
       "Nodemailer",
@@ -15,30 +14,25 @@ const projects = [
       "MongoDB",
     ],
     gitUrl: "https://github.com/ThalitadosReis/cafe-template",
-    previewUrl: "https://template-cafe.netlify.app/",
+    previewUrl: "https://boldbrew-cafe.netlify.app/",
   },
   {
     title: "Salon Template",
     description: {
-      en: "Modern salon website template built for bookings and service presentation, with a React frontend and a small Express plus Nodemailer backend for reservation emails.",
-      de: "Modernes Salon-Website-Template fuer Buchungen und Leistungsdarstellung, mit React-Frontend und einem kleinen Express- plus Nodemailer-Backend fuer Reservierungs-E-Mails.",
+      en: "Salon website template with a service overview, booking request form, and email delivery via Express and Nodemailer. Includes legal pages for compliance-ready deployments and a clean multi-page React structure ready to customize and ship.",
+      de: "Salon-Website-Template mit Leistungsuebersicht, Buchungsanfrageformular und E-Mail-Versand ueber Express und Nodemailer. Enthaelt rechtskonforme Seiten wie Impressum und Datenschutz sowie eine klare mehrseitige React-Struktur.",
     },
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "Express",
-      "Nodemailer",
-    ],
+    technologies: ["React", "Tailwind CSS", "Express", "Nodemailer"],
     gitUrl: "https://github.com/ThalitadosReis/salon-template",
-    previewUrl: "https://template-salon.netlify.app/",
+    previewUrl: "https://maison-salon.netlify.app/",
   },
 
   {
     title: "Brew Commerce",
     highlight: true,
     description: {
-      en: "E-commerce platform built with Next.js, custom JWT authentication, and MongoDB. It includes a storefront, product discovery flow, Stripe checkout, and a protected admin area for products and orders.",
-      de: "E-Commerce-Plattform, entwickelt mit Next.js, eigener JWT-Authentifizierung und MongoDB. Sie umfasst eine Storefront, eine Produktsuche, Stripe-Checkout und einen geschuetzten Admin-Bereich fuer Produkte und Bestellungen.",
+      en: "Coffee e-commerce platform built with Next.js, custom JWT authentication, and MongoDB. Ships a marketing site, a full shopping experience with Stripe checkout, and a protected admin console for managing products and orders.",
+      de: "Kaffee-E-Commerce-Plattform, entwickelt mit Next.js, eigener JWT-Authentifizierung und MongoDB. Beinhaltet eine Marketing-Site, ein vollstaendiges Einkaufserlebnis mit Stripe-Checkout und einen geschuetzten Admin-Bereich fuer Produkte und Bestellungen.",
     },
     technologies: [
       "Next.js",
@@ -58,14 +52,15 @@ const projects = [
   {
     title: "Physio+",
     description: {
-      en: "Responsive website for a physiotherapy practice focused on clarity and trust. It highlights services, supports appointment requests, and guides visitors through a clean, accessible interface.",
-      de: "Responsive Website fuer eine Physiotherapiepraxis mit Fokus auf Klarheit und Vertrauen. Sie praesentiert Leistungen, unterstuetzt Terminanfragen und fuehrt Besucher durch eine klare, barrierearme Oberflaeche.",
+      en: "Responsive website for a physiotherapy clinic with a service overview, interactive booking form with date and time selection, FAQ section, and email handling for appointment and contact requests.",
+      de: "Responsive Website fuer eine Physiotherapiepraxis mit Leistungsuebersicht, interaktivem Buchungsformular mit Datums- und Uhrzeitauswahl, FAQ-Bereich und E-Mail-Verarbeitung fuer Termin- und Kontaktanfragen.",
     },
     technologies: [
-      "React.js",
+      "React",
+      "React Router",
       "Tailwind CSS",
-      "JavaScript",
-      "Express.js",
+      "Netlify Functions",
+      "Express",
       "Nodemailer",
     ],
     gitUrl: "https://github.com/ThalitadosReis/physio-website",
@@ -74,18 +69,18 @@ const projects = [
   {
     title: "Brewtopia Café",
     description: {
-      en: "Marketing website for a cafe brand with a warm, editorial feel. It showcases the menu, brand story, and contact details in a responsive React interface.",
-      de: "Marketing-Website fuer eine Cafemarke mit warmer, editorialer Anmutung. Sie zeigt Speisekarte, Markengeschichte und Kontaktdaten in einer responsiven React-Oberflaeche.",
+      en: "Marketing website for a coffee brand featuring a homepage, interactive menu, and contact section. Built as a clean React SPA with modular components, Tailwind CSS styling, and Vite for fast builds and easy deployment.",
+      de: "Marketing-Website fuer eine Kaffeemarke mit Startseite, interaktivem Menue und Kontaktbereich. Als sauberes React-SPA mit modularen Komponenten, Tailwind-CSS-Styling und Vite fuer schnelle Builds und einfaches Deployment entwickelt.",
     },
-    technologies: ["React.js", "Tailwind CSS", "JavaScript"],
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
     gitUrl: "https://github.com/ThalitadosReis/cafe-website",
     previewUrl: "https://brewtopiacafe.netlify.app/",
   },
   {
     title: "Moonlight",
     description: {
-      en: "Event discovery platform built with the MERN stack for browsing, promoting, and attending concerts, festivals, workshops, and more. It was created as the final project for Ironhack's Web Development Bootcamp.",
-      de: "Event-Plattform auf Basis des MERN-Stacks zum Entdecken, Bewerben und Besuchen von Konzerten, Festivals, Workshops und mehr. Sie entstand als Abschlussprojekt des Web Development Bootcamps von Ironhack.",
+      en: "Full-stack event discovery platform built with the MERN stack for browsing, promoting, and attending concerts, festivals, and workshops. Features real-time interactions via Socket.io, developed as the capstone project for Ironhack's Web Development Bootcamp.",
+      de: "Full-Stack-Event-Plattform auf Basis des MERN-Stacks zum Entdecken, Bewerben und Besuchen von Konzerten, Festivals und Workshops. Mit Echtzeit-Interaktionen ueber Socket.io, entwickelt als Abschlussprojekt des Ironhack Web Development Bootcamps.",
     },
     technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Socket.io"],
     gitUrl:
