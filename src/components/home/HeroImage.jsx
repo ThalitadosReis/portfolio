@@ -9,16 +9,23 @@ export default function HeroImage({ className = "", delay = 0.3 }) {
 
   return (
     <Reveal className={className} delay={delay} y={0}>
-      <div className="mx-auto w-[17.5rem] rotate-[1.5deg] rounded-[2px] border border-neutral-200 bg-white p-3 pb-10 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_10px_30px_rgba(0,0,0,0.08)]">
-        <div className="aspect-[1/1.18] w-full overflow-hidden rounded-[1px] bg-neutral-200">
-          <img
-            src={image}
-            alt={t.banner.profileAlt}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
+      <div
+        className="animate-hero-float"
+        style={{ animationDelay: `${delay + 0.8}s` }}
+      >
+        <div className="mx-auto w-70 rotate-[1.5deg] border border-neutral-200 bg-white p-3 pb-10 shadow-lg">
+          <div className="aspect-[1/1.18] w-full overflow-hidden rounded-[1px] bg-neutral-200">
+            <img
+              src={image}
+              alt={t.banner.profileAlt}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={252}
+              height={297}
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </Reveal>

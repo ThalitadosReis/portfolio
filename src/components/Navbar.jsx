@@ -8,7 +8,7 @@ function BrandLink({ className = "", dotClassName = "text-accent" }) {
   return (
     <Link
       to="/"
-      className={`font-display text-xl leading-none tracking-tight ${className}`.trim()}
+      className={`font-serif text-xl leading-none tracking-tight ${className}`.trim()}
     >
       Thalita<span className={dotClassName}>.</span>
     </Link>
@@ -19,16 +19,16 @@ function LanguageToggle({ currentLanguage, onToggle, className = "" }) {
   return (
     <button
       onClick={onToggle}
-      className={`flex items-center gap-1.5 bg-transparent border-none cursor-pointer text-xs tracking-widest uppercase text-neutral-400 transition-colors duration-200 hover:text-accent/45 ${className}`.trim()}
+      className={`flex items-center gap-1.5 bg-transparent border-none cursor-pointer text-[10px] font-medium tracking-[0.18em] uppercase text-stone-400 transition-colors duration-200 hover:text-accent/60 ${className}`.trim()}
     >
       <span
-        className={currentLanguage === "en" ? "text-accent font-semibold" : ""}
+        className={currentLanguage === "en" ? "text-accent" : ""}
       >
         EN
       </span>
-      <span className="text-neutral-400">·</span>
+      <span className="text-stone-300">·</span>
       <span
-        className={currentLanguage === "de" ? "text-accent font-semibold" : ""}
+        className={currentLanguage === "de" ? "text-accent" : ""}
       >
         DE
       </span>
@@ -42,8 +42,8 @@ function DesktopNavLink({ item }) {
       to={item.to}
       end={item.end}
       className={({ isActive }) =>
-        `relative pb-px text-xs tracking-widest uppercase transition-colors duration-200 ${
-          isActive ? "text-neutral-800" : "text-neutral-500 hover:text-accent"
+        `relative pb-px text-[10px] font-medium tracking-[0.18em] uppercase transition-colors duration-200 ${
+          isActive ? "text-stone-800" : "text-stone-400 hover:text-accent"
         }`
       }
     >
@@ -65,18 +65,16 @@ function MobileNavLink({ item }) {
       to={item.to}
       end={item.end}
       className={({ isActive }) =>
-        `group border-b border-neutral-200 py-5 transition-colors duration-200 ${
-          isActive ? "text-neutral-600" : "text-neutral-800 hover:text-accent"
+        `group border-b border-stone-100 py-5 transition-colors duration-200 ${
+          isActive ? "text-stone-500" : "text-stone-800 hover:text-accent"
         }`
       }
     >
       <span className="flex items-center justify-between gap-4">
-        <span className="font-display text-2xl tracking-tight">
-          {item.label}
-        </span>
+        <span className="font-serif text-2xl tracking-tight">{item.label}</span>
         <ArrowRightIcon
           size={14}
-          className="shrink-0 text-neutral-400 transition-colors duration-200 group-hover:text-accent"
+          className="shrink-0 text-stone-300 transition-colors duration-200 group-hover:text-accent"
         />
       </span>
     </NavLink>
@@ -89,7 +87,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
   const currentLanguage = lang;
-  
+
   const navItems = [
     { to: "/", label: t.nav.home, end: true },
     { to: "/projects", label: t.nav.projects },
@@ -114,60 +112,57 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled
-            ? "border-b border-neutral-200 bg-neutral-100"
-            : "border-b border-transparent bg-neutral-100"
-        }`}
-      >
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <BrandLink className="text-neutral-700" />
+      <div className="fixed top-4 inset-x-4 z-50 flex justify-center pointer-events-none">
+        <header
+          className={`w-full max-w-5xl pointer-events-auto rounded-2xl transition-all duration-500 ${
+            scrolled
+              ? "bg-white/95 backdrop-blur-xl border border-stone-200/80 shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
+              : "bg-white/75 backdrop-blur-md border border-stone-100/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)]"
+          }`}
+        >
+          <div className="px-6 h-14 flex items-center justify-between">
+            <BrandLink className="text-stone-800" dotClassName="text-accent" />
 
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <DesktopNavLink key={item.to} item={item} />
-            ))}
-          </nav>
+            <nav className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <DesktopNavLink key={item.to} item={item} />
+              ))}
+            </nav>
 
-          <div className="hidden md:flex items-center gap-4">
-            <LanguageToggle
-              currentLanguage={currentLanguage}
-              onToggle={toggleLanguage}
-              className="hidden md:flex"
-            />
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageToggle
+                currentLanguage={currentLanguage}
+                onToggle={toggleLanguage}
+              />
+            </div>
+
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className="md:hidden text-stone-700 bg-transparent border-none cursor-pointer p-1"
+              aria-label="Toggle menu"
+            >
+              {open ? <XIcon size={20} /> : <ListIcon size={20} />}
+            </button>
           </div>
+        </header>
+      </div>
 
-          <button
-            onClick={() => setOpen((value) => !value)}
-            className="md:hidden text-neutral-700 bg-transparent border-none cursor-pointer p-1"
-            aria-label="Toggle menu"
-          >
-            {open ? <XIcon size={20} /> : <ListIcon size={20} />}
-          </button>
-        </div>
-      </header>
-
+      {/* mobile drawer */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-neutral-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-stone-50 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-6 h-14">
-          <BrandLink
-            className="text-neutral-800"
-            dotClassName="text-neutral-600"
-          />
+        <div className="flex items-center justify-between px-6 h-14 border-b border-stone-100">
+          <BrandLink className="text-stone-800" dotClassName="text-accent" />
           <button
             onClick={() => setOpen(false)}
-            className="text-neutral-600 bg-transparent border-none cursor-pointer"
+            className="text-stone-500 bg-transparent border-none cursor-pointer"
             aria-label="Close menu"
           >
             <XIcon size={20} />
           </button>
         </div>
-
-        <div className="border-b border-neutral-200" />
 
         <nav className="flex-1 flex flex-col justify-center px-8">
           {navItems.map((item) => (
@@ -175,8 +170,10 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="px-8 pb-8 flex items-center justify-between border-t border-neutral-200 pt-6">
-          <p className="text-xs text-neutral-400">{siteData.email}</p>
+        <div className="px-8 pb-8 flex items-center justify-between border-t border-stone-100 pt-6">
+          <p className="text-[10px] font-medium tracking-[0.15em] text-stone-400">
+            {siteData.email}
+          </p>
           <LanguageToggle
             currentLanguage={currentLanguage}
             onToggle={toggleLanguage}

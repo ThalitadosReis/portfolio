@@ -17,21 +17,21 @@ export const de = {
     projectsCta: "Alle Projekte",
     contactCta: "Kontakt aufnehmen",
   },
-  about: {
-    step: "01",
-    title: "Über mich",
-    paragraph1:
-      "Ich bin Thalita, Junior Full-Stack Entwicklerin aus Lenzburg, und entwickle gern durchdachte digitale Erlebnisse mit React und JavaScript. Mich reizt es, Ideen in klare, benutzerfreundliche Produkte zu verwandeln, die stimmig und sauber umgesetzt sind.",
-    paragraph2:
-      "Vor meinem Wechsel in die Tech-Welt habe ich im Gastgewerbe gearbeitet. Diese Erfahrung prägt bis heute, wie ich kommuniziere, im Team arbeite und über die Menschen nachdenke, die meine Produkte nutzen. Ich suche Projekte und Teams, in denen ich weiter lernen, sorgfältig beitragen und als Entwicklerin wachsen kann.",
-  },
   projects: {
-    step: "02",
+    step: "01",
     title: "Projekte",
     viewAll: "Alle Projekte",
     featured: "Highlight",
     sourceCode: "Source Code",
     livePreview: "Live Demo",
+  },
+  about: {
+    step: "02",
+    title: "Über mich",
+    paragraph1:
+      "Ich bin Thalita, Junior Full-Stack Entwicklerin aus Lenzburg, und entwickle gern durchdachte digitale Erlebnisse mit React und JavaScript. Mich reizt es, Ideen in klare, benutzerfreundliche Produkte zu verwandeln, die stimmig und sauber umgesetzt sind.",
+    paragraph2:
+      "Vor meinem Wechsel in die Tech-Welt habe ich im Gastgewerbe gearbeitet. Diese Erfahrung prägt bis heute, wie ich kommuniziere, im Team arbeite und über die Menschen nachdenke, die meine Produkte nutzen. Ich suche Projekte und Teams, in denen ich weiter lernen, sorgfältig beitragen und als Entwicklerin wachsen kann.",
   },
   contact: {
     step: "03",

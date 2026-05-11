@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap");
 
 @import "tailwindcss";
 
@@ -12,12 +12,58 @@
 
 @theme inline {
   --color-accent: #d07e42;
+  --color-ink: #141110;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "New York", serif;
+  --animate-hero-float: hero-float 5s ease-in-out infinite;
+  --animate-scroll-drift: scroll-drift 2.4s ease-in-out infinite;
 }
 
-body {
-  font-family: "Inter", sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: #fafaf9;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
 }
 
-.font-display {
-  font-family: "New York", serif;
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes scroll-drift {
+
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: translateY(0);
+    }
+
+    50% {
+      opacity: 0.85;
+      transform: translateY(5px);
+    }
+  }
 }

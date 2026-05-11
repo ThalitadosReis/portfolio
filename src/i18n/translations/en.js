@@ -16,21 +16,21 @@ export const en = {
     projectsCta: "All projects",
     contactCta: "Get in touch",
   },
-  about: {
-    step: "01",
-    title: "About me",
-    paragraph1:
-      "I'm Thalita, a junior full-stack developer based in Lenzburg who enjoys building thoughtful digital experiences with React and JavaScript. I like turning ideas into clear, usable products that feel polished and intuitive.",
-    paragraph2:
-      "Before tech, I worked in hospitality, which shaped how I collaborate, communicate, and think about people using what I build. I'm looking for projects and teams where I can keep learning, contribute with care, and grow as a developer.",
-  },
   projects: {
-    step: "02",
+    step: "01",
     title: "Projects",
     viewAll: "All projects",
     featured: "Highlight",
     sourceCode: "Source code",
     livePreview: "Live Demo",
+  },
+  about: {
+    step: "02",
+    title: "About me",
+    paragraph1:
+      "I'm Thalita, a junior full-stack developer based in Lenzburg who enjoys building thoughtful digital experiences with React and JavaScript. I like turning ideas into clear, usable products that feel polished and intuitive.",
+    paragraph2:
+      "Before tech, I worked in hospitality, which shaped how I collaborate, communicate, and think about people using what I build. I'm looking for projects and teams where I can keep learning, contribute with care, and grow as a developer.",
   },
   contact: {
     step: "03",

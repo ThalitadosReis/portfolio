@@ -8,11 +8,11 @@ export default function SectionHeading({
 }) {
   return (
     <Reveal className={className}>
-      <p className="mb-2 text-[0.7rem] font-mono text-accent leading-4 tracking-[0.1em] uppercase">
+      <p className="mb-2.5 text-[10px] font-medium text-accent tracking-[0.2em] uppercase">
         {label}
       </p>
       <h2
-        className={`font-display text-2xl text-ink leading-none tracking-tight ${titleClassName}`.trim()}
+        className={`font-serif text-2xl text-ink leading-none ${titleClassName}`.trim()}
       >
         {title}
       </h2>

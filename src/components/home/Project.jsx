@@ -1,10 +1,10 @@
 import { getLocalizedProjects } from "../../data/projectsData.js";
-import { ArrowUpRightIcon, GithubLogoIcon } from "@phosphor-icons/react";
 import Reveal from "../Reveal.jsx";
-import CtaLink from "../ui/CtaLink.jsx";
-import SectionHeading from "../ui/SectionHeading.jsx";
-import Tag from "../ui/Tag.jsx";
 import { useLang } from "../../i18n/LangContext.jsx";
+import CtaLink from "../ui/CtaLink.jsx";
+import Tag from "../ui/Tag.jsx";
+import SectionHeading from "../ui/SectionHeading.jsx";
+import { ArrowUpRightIcon, GithubLogoIcon } from "@phosphor-icons/react";
 
 export default function Project() {
   const { t, lang } = useLang();
@@ -14,7 +14,7 @@ export default function Project() {
   if (featuredProjects.length === 0) return null;
 
   return (
-    <section id="project" className="bg-neutral-100 py-20">
+    <section id="project" className="bg-white py-24">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-10">
           <SectionHeading label={t.projects.step} title={t.projects.title} />
@@ -26,27 +26,28 @@ export default function Project() {
                 className="space-y-6"
                 delay={0.08 + index * 0.08}
               >
-                <div className="rounded-sm border border-neutral-200 bg-neutral-50 p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.04)]">
+                <div className="group/card relative border border-stone-200 bg-white p-8 lg:p-10 transition-all duration-300 hover:border-stone-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)] hover:-translate-y-0.5 overflow-hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-accent/0 group-hover/card:bg-accent/60 transition-all duration-300" />
                   <div className="flex items-start justify-between gap-4 mb-4">
-                    <h3 className="font-display text-3xl leading-none tracking-tight">
+                    <h3 className="font-serif text-3xl leading-none tracking-tight text-stone-900">
                       {project.title}
                     </h3>
-                    <span className="inline-flex shrink-0 items-center rounded-sm border border-accent/45 bg-accent/10 px-2.5 py-0.5 text-[0.65rem] font-medium leading-4 tracking-[0.1em] uppercase text-accent">
+                    <span className="inline-flex shrink-0 items-center border border-accent/30 bg-accent/6 px-2.5 py-0.5 text-[9px] font-medium tracking-[0.16em] uppercase text-accent">
                       {t.projects.featured}
                     </span>
                   </div>
 
-                  <p className="text-sm text-neutral-600 leading-relaxed font-light mb-5">
+                  <p className="text-sm text-stone-500 font-light leading-[1.75] mb-6">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <Tag key={tech}>{tech}</Tag>
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-neutral-200 pt-4">
+                  <div className="flex flex-wrap items-center gap-x-4 border-t border-stone-200 pt-4">
                     <CtaLink
                       href={project.gitUrl}
                       target="_blank"

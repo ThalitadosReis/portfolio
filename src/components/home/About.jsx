@@ -27,25 +27,27 @@ export default function About() {
   const paragraphs = [t.about.paragraph1, t.about.paragraph2].filter(Boolean);
 
   return (
-    <section id="about" className="bg-white py-20">
+    <section id="about" className="bg-stone-50 py-24">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-10">
           <SectionHeading label={t.about.step} title={t.about.title} />
 
-          <div className="lg:col-start-2 font-light space-y-4">
+          <div className="lg:col-start-2 font-light space-y-5">
             <HeroImage className="lg:hidden pb-4" delay={0.04} />
             {paragraphs.map((paragraph, index) => (
               <Reveal key={index} delay={0.08 + index * 0.08}>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-base text-stone-500 leading-[1.8]">
                   {paragraph}
                 </p>
               </Reveal>
             ))}
-            <div className="flex flex-wrap gap-2 pt-2">
-              {aboutTags[language].map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </div>
+            <Reveal delay={0.2}>
+              <div className="flex flex-wrap gap-2 pt-2">
+                {aboutTags[language].map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

@@ -20,31 +20,27 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-neutral-200 bg-white">
+    <footer className="border-t border-stone-200 bg-stone-50/80">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
-        <div className="flex items-center gap-6">
-          <span className="font-display text-xl leading-none text-neutral-700">
+        <div className="flex items-center gap-5">
+          <span className="font-serif text-xl leading-none tracking-tight text-stone-800">
             Thalita<span className="text-accent">.</span>
           </span>
-          <span className="text-neutral-400 hidden sm:block">·</span>
-          <span className="hidden text-[0.75rem] font-mono leading-4 tracking-[0.1em] text-accent/75 sm:block">
+          <span className="text-stone-300 hidden sm:block">·</span>
+          <span className="hidden text-[10px] font-medium tracking-[0.16em] text-stone-400 sm:block">
             © {year}
           </span>
         </div>
 
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-6">
           {navItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-[0.65rem] leading-4 tracking-[0.1em] uppercase text-neutral-500 transition-colors duration-200 hover:text-accent"
-            >
+            <CtaLink key={item.to} to={item.to} variant="inline" size="micro">
               {item.label}
-            </Link>
+            </CtaLink>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <CtaLink
             href={siteData.github}
             target="_blank"

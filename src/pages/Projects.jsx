@@ -11,35 +11,30 @@ export default function Projects() {
   const projects = getLocalizedProjects(lang);
 
   return (
-    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col bg-white pt-14">
+    <main className="flex min-h-screen flex-col bg-stone-50 pt-20">
       <PageIntro label={t.projects.title} title={t.projects.title} />
 
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col gap-px overflow-hidden rounded-sm border border-neutral-200 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.06)]">
+          <div className="flex flex-col overflow-hidden border border-stone-200">
             {projects.map((project, index) => (
               <Reveal
                 key={project.title}
-                delay={index * 0.08}
-                className="bg-neutral-50 hover:bg-neutral-100 transition-colors duration-200 group border-b border-neutral-200 last:border-0"
+                delay={index * 0.06}
+                className="relative bg-white transition-all duration-300 group border-b border-stone-200 last:border-0 hover:bg-stone-50/50 hover:shadow-[inset_2px_0_0_0_rgba(208,126,66,0.45)]"
               >
-                <article className="p-7 lg:p-8">
-                  <div className="flex items-start justify-between gap-6 mb-4">
+                <article className="p-7 lg:p-10">
+                  <div className="flex items-start justify-between gap-6 mb-5">
                     <div className="flex items-start gap-3">
-                      <span className="text-[0.7rem] font-mono text-accent leading-4 tracking-[0.1em] uppercase">
+                      <span className="text-[10px] font-medium text-accent/70 tracking-[0.16em] uppercase mt-0.5">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h2 className="font-display text-2xl leading-none tracking-tight text-neutral-800 transition-colors duration-200 group-hover:text-neutral-600 lg:text-3xl">
+                      <h2 className="font-serif text-2xl leading-none text-stone-900 transition-colors duration-200 group-hover:text-stone-600 lg:text-3xl">
                         {project.title}
                       </h2>
-                      {project.highlight && (
-                        <span className="inline-flex shrink-0 items-center rounded-sm border border-accent/45 bg-accent/10 px-2.5 py-0.5 text-[0.65rem] font-medium leading-4 tracking-[0.1em] uppercase text-accent">
-                          {t.projects.featured}
-                        </span>
-                      )}
                     </div>
 
-                    <div className="hidden shrink-0 items-center gap-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 md:flex">
+                    <div className="hidden shrink-0 items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:flex">
                       <CtaLink
                         href={project.gitUrl}
                         target="_blank"
@@ -63,18 +58,18 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div>
-                    <p className="text-sm text-neutral-600 leading-relaxed font-light mb-5 max-w-2xl ml-8">
+                  <div className="ml-8 space-y-6">
+                    <p className="text-sm text-stone-500 font-light leading-[1.75] max-w-xl">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-1.5 ml-8">
+                    <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <Tag key={tech}>{tech}</Tag>
                       ))}
                     </div>
 
-                    <div className="flex items-center gap-5 mt-5 pt-5 border-t border-neutral-200 ml-8">
+                    <div className="flex items-center gap-4 mt-6 pt-4 border-t border-stone-200">
                       <CtaLink
                         href={project.gitUrl}
                         target="_blank"
