@@ -83,19 +83,3 @@ body.cursor-on * {
 .nav-link:hover::after {
   width: 100%;
 }
-
-/* dot pulse */
-.dot-pulse {
-  width: 7px;
-  height: 7px;
-  background: #2a8a4f;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(42, 138, 79, 0.4);
-  animation: dot-pulse 2.2s ease-in-out infinite;
-}
-
-@keyframes dot-pulse {
-  50% {
-    box-shadow: 0 0 0 6px rgba(42, 138, 79, 0);
-  }
-}

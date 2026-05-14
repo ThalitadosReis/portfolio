@@ -1,7 +1,5 @@
 import { ArrowDownIcon } from "@phosphor-icons/react";
 import Reveal from "../Reveal.jsx";
-import CtaLink from "../ui/CtaLink.jsx";
-import HeroImage from "./HeroImage.jsx";
 import { useLang } from "../../i18n/LangContext.jsx";
 
 export default function Banner() {
@@ -9,89 +7,51 @@ export default function Banner() {
 
   return (
     <section
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-stone-50"
+      className="relative flex flex-col justify-between px-6 sm:px-14 pt-20 sm:pt-24 pb-8 sm:pb-14 min-h-svh"
       id="home"
     >
-      {/* gradient blobs */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-      >
-        <div className="absolute -top-32 -right-32 h-[560px] w-[560px] rounded-full bg-accent/20 blur-[96px]" />
-        <div className="absolute bottom-0 -left-20 h-72 w-72 rounded-full bg-accent/12 blur-3xl" />
-      </div>
-
-      <div className="max-w-5xl mx-auto px-6 w-full pt-28 pb-24 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-16 items-center">
-          <div>
-            <Reveal className="inline-flex items-center gap-2.5 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              <span className="text-[10px] font-medium leading-4 tracking-[0.2em] uppercase text-stone-400">
-                {t.banner.available}
-              </span>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <h1 className="font-serif mb-6 text-[clamp(4.5rem,10vw,10rem)] leading-[0.92] tracking-[-0.025em]">
-                <span className="block text-stone-900">
-                  {t.banner.firstName}
-                </span>
-                <span className="block text-accent/70 italic">
-                  {t.banner.lastName}
-                </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <p className="text-[10px] font-medium text-stone-400 tracking-[0.22em] uppercase mb-7">
-                {t.banner.title}
-              </p>
-            </Reveal>
-
-            <div className="mb-7">
-              <Reveal delay={0.15} scaleX className="inline-block w-10">
-                <div className="h-px bg-accent/50" />
-              </Reveal>
-            </div>
-
-            <Reveal delay={0.2}>
-              <p className="text-base text-stone-500 font-light leading-[1.8] max-w-md mb-12 tracking-[0.01em]">
-                {t.banner.description} {t.banner.specialization}
-              </p>
-            </Reveal>
-
-            <Reveal className="flex flex-wrap items-center gap-6" delay={0.25}>
-              <CtaLink
-                to="/projects"
-                variant="default"
-                size="micro"
-                className="py-3 px-8"
-              >
-                {t.banner.projectsCta}
-              </CtaLink>
-              <CtaLink to="/contact" variant="inline" size="micro">
-                {t.banner.contactCta}
-              </CtaLink>
-            </Reveal>
+      <div className="flex flex-wrap items-end justify-between gap-x-14 gap-y-4 border-b border-rule pb-3.5 text-[12px] text-ink-2">
+        <div className="flex flex-wrap gap-x-14 gap-y-3">
+          <div className="flex flex-col gap-1">
+            <span className="text-[10px] tracking-[0.14em] uppercase text-mute">
+              {t.banner.based}
+            </span>
+            <span className="text-ink">Lenzburg, CH</span>
           </div>
-
-          <HeroImage className="hidden lg:block" />
+          <div className="flex flex-col gap-1">
+            <span className="text-[10px] tracking-[0.14em] uppercase text-mute">
+              Role
+            </span>
+            <span className="text-ink">{t.banner.title}</span>
+          </div>
         </div>
       </div>
 
-      <Reveal
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        delay={0.6}
-        y={0}
-      >
-        <span className="text-[9px] font-medium leading-4 tracking-[0.2em] uppercase text-stone-400">
-          {t.banner.scrollDown}
-        </span>
-        <ArrowDownIcon
-          size={11}
-          className="text-stone-400 animate-scroll-drift"
-        />
-      </Reveal>
+      {/* title + caption */}
+      <div>
+        <Reveal>
+          <h1 className="font-serif font-normal text-[clamp(96px,11vw,188px)] leading-[0.92] tracking-[-0.025em] m-0">
+            <span className="block">Thalita</span>
+            <span className="block">
+              <em className="italic text-ink-2">dos</em> Reis
+            </span>
+          </h1>
+        </Reveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-5 items-end border-t border-rule pt-5 mt-1">
+          <Reveal delay={0.6} className="text-[13px] text-ink-2 max-w-[32ch]">
+            <span>{t.banner.description}</span>
+            <span>{t.banner.specialization}</span>
+          </Reveal>
+
+          <Reveal delay={0.8} className="flex md:justify-end">
+            <div className="flex items-center gap-2.5 font-mono text-[11px] tracking-[0.18em] uppercase text-mute">
+              <span>{t.banner.scrollDown}</span>
+              <ArrowDownIcon size={12} className="animate-bounce" />
+            </div>
+          </Reveal>
+        </div>
+      </div>
     </section>
   );
 }

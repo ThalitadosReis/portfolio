@@ -39,7 +39,10 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between px-5 sm:px-14 py-3 sm:py-4 font-mono text-[11px] tracking-[0.02em]">
         <div className="flex items-center gap-2.5 text-ink">
-          <span className="dot-pulse" />
+          <span className="relative flex h-[7px] w-[7px]">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-700 opacity-75 [animation-duration:1.2s]" />
+            <span className="relative inline-flex h-[7px] w-[7px] rounded-full bg-green-700" />
+          </span>
           <span>{t.banner.available}</span>
         </div>
 
