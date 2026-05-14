@@ -26,23 +26,19 @@ export default function About() {
         aside="Lenzburg, CH"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-9 md:gap-14">
-        <Reveal className="flex flex-col gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr_1fr] gap-9 md:gap-x-14 items-start">
+        <Reveal>
           <ProfilePhoto />
-          <Meta label="Name" value="Thalita dos Reis" />
-          <Meta label={t.banner.based} value="Lenzburg, CH" />
-          <Meta label={t.about.languagesLabel} value={siteData.languages} />
-          <Meta label={t.about.openToLabel} value={t.about.openToValue} />
         </Reveal>
 
         <div className="flex flex-col gap-7">
           <Reveal>
-            <p className="m-0 text-ink font-serif text-[clamp(22px,2.5vw,26px)] leading-[1.4] max-w-[30ch] first-letter:text-[1.4em] first-letter:italic first-letter:pr-1">
+            <p className="m-0 text-ink font-serif text-[clamp(22px,2.5vw,26px)] leading-[1.4] first-letter:text-[1.4em] first-letter:italic first-letter:pr-1">
               {t.about.paragraph1}
             </p>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="m-0 text-ink font-serif text-[clamp(22px,2.5vw,26px)] leading-[1.4] max-w-[30ch] first-letter:text-[1.4em] first-letter:italic first-letter:pr-1">
+            <p className="m-0 text-ink font-serif text-[clamp(22px,2.5vw,26px)] leading-[1.4] first-letter:text-[1.4em] first-letter:italic first-letter:pr-1">
               {t.about.paragraph2}
             </p>
           </Reveal>
@@ -64,6 +60,13 @@ export default function About() {
             ))}
           </Reveal>
         </div>
+
+        <Reveal className="hidden md:flex flex-col gap-7">
+          <Meta label="Name" value="Thalita dos Reis" />
+          <Meta label={t.banner.based} value="Lenzburg, CH" />
+          <Meta label={t.about.languagesLabel} value={siteData.languages} />
+          <Meta label={t.about.openToLabel} value={t.about.openToValue} />
+        </Reveal>
       </div>
     </section>
   );

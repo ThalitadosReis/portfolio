@@ -11,8 +11,6 @@ export const de = {
     based: "Wohnhaft in",
     description: "Ich baue durchdachte digitale Erlebnisse",
     specialization: "mit React, Node und einer Gastfreundschafts-Haltung.",
-    quoteA: "„Code im Dienst der Klarheit,",
-    quoteB: 'und die Menschen zuerst."',
     profileAlt: "Profil",
   },
   projects: {

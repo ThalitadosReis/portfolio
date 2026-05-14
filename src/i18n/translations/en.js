@@ -11,8 +11,6 @@ export const en = {
     based: "Based in",
     description: "I build thoughtful digital experiences",
     specialization: "with React, Node and a hospitality mindset.",
-    quoteA: "“Code in service of clarity,",
-    quoteB: "and people first.”",
     profileAlt: "Profile",
   },
   projects: {
