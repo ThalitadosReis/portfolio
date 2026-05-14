@@ -1,6 +1,6 @@
 export const en = {
   nav: {
-    projects: "Work",
+    projects: "Projects",
     about: "About",
     contact: "Contact",
   },
@@ -26,6 +26,7 @@ export const en = {
       "I'm Thalita, a junior full-stack developer based in Lenzburg who enjoys building thoughtful digital experiences with React and JavaScript. I like turning ideas into clear, usable products that feel polished and intuitive.",
     paragraph2:
       "Before tech, I worked in hospitality, which shaped how I collaborate, communicate, and think about the people using what I build. I'm looking for projects and teams where I can keep learning, contribute with care, and grow as a developer.",
+    languagesLabel: "Languages",
     openToLabel: "Open to",
     openToValue: "Junior roles · Freelance · Remote",
     toolsLabel: "Tools I reach for",
@@ -46,8 +47,6 @@ export const en = {
     stackTitle: "My stack",
     socialTitle: "Or reach me on",
     email: "Send an email",
-    whatsapp: "WhatsApp",
     emailAria: "Send email",
-    whatsappAria: "Send WhatsApp message",
   },
 };

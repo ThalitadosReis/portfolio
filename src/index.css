@@ -1,69 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap");
-
 @import "tailwindcss";
 
-@font-face {
-  font-family: "New York";
-  src: url("./assets/fonts/NewYork.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+:root {
+  --bg: #f3f0e8;
+  --paper: #ebe7dc;
+  --ink: #1a1a1a;
+  --ink-2: #4a4843;
+  --mute: #8a857b;
+  --rule: #c4bfb5;
+  --rule-strong: rgba(22, 22, 22, 0.34);
 }
 
 @theme inline {
-  --color-accent: #d07e42;
-  --color-ink: #141110;
-  --font-sans: "Inter", sans-serif;
-  --font-serif: "New York", serif;
-  --animate-hero-float: hero-float 5s ease-in-out infinite;
-  --animate-scroll-drift: scroll-drift 2.4s ease-in-out infinite;
+  --color-bg: var(--bg);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-mute: var(--mute);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-photo-bg: var(--photo-bg);
+  --color-topbar-bg: var(--topbar-bg);
+
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
 
+  html,
   body {
+    background: var(--bg);
+    color: var(--ink);
+    scroll-behavior: smooth;
     @apply font-sans antialiased;
-    background-color: #fafaf9;
+    overflow-x: hidden;
   }
 
   * {
     -webkit-tap-highlight-color: transparent;
   }
 
+  ::selection {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--ink);
     outline-offset: 3px;
     border-radius: 3px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes hero-float {
+body.cursor-on,
+body.cursor-on * {
+  cursor: none !important;
+}
 
-    0%,
-    100% {
-      transform: translateY(0);
-    }
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
 
-    50% {
-      transform: translateY(-10px);
-    }
-  }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--ink);
+  transition: width 0.35s ease;
+}
 
-  @keyframes scroll-drift {
+.nav-link:hover::after {
+  width: 100%;
+}
 
-    0%,
-    100% {
-      opacity: 0.35;
-      transform: translateY(0);
-    }
+/* dot pulse */
+.dot-pulse {
+  width: 7px;
+  height: 7px;
+  background: #2a8a4f;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(42, 138, 79, 0.4);
+  animation: dot-pulse 2.2s ease-in-out infinite;
+}
 
-    50% {
-      opacity: 0.85;
-      transform: translateY(5px);
-    }
+@keyframes dot-pulse {
+  50% {
+    box-shadow: 0 0 0 6px rgba(42, 138, 79, 0);
   }
 }

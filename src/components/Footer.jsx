@@ -2,7 +2,6 @@ import {
   EnvelopeSimpleIcon,
   GithubLogoIcon,
   LinkedinLogoIcon,
-  WhatsappLogoIcon,
 } from "@phosphor-icons/react";
 import { siteData } from "../data/siteData.js";
 
@@ -23,17 +22,6 @@ export default function Footer() {
         >
           <EnvelopeSimpleIcon size={14} />
         </a>
-        {siteData.whatsappUrl && (
-          <a
-            href={siteData.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mute hover:text-ink transition-colors duration-200"
-            aria-label="WhatsApp"
-          >
-            <WhatsappLogoIcon size={14} />
-          </a>
-        )}
         <a
           href={siteData.github}
           target="_blank"

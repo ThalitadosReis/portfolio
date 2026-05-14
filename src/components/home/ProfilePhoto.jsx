@@ -8,7 +8,7 @@ export default function ProfilePhoto({ className = "" }) {
 
   return (
     <div
-      className={`aspect-3/4 border border-rule filter-[grayscale(0.08)_contrast(1.02)] overflow-hidden bg-photo-bg ${className}`.trim()}
+      className={`aspect-3/4 border border-rule filter-[grayscale(0.08)_contrast(1.02)] overflow-hidden bg-paper ${className}`.trim()}
     >
       <img
         src={image}
